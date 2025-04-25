@@ -22,18 +22,8 @@ public slots:
   void updatePanel(bool _offroad);
 
 private:
-  // UI elements
   QStackedLayout* main_layout = nullptr;
   QWidget* vehicleScreen = nullptr;
-  PlatformSelector* platformSelector = nullptr;
-  ButtonParamControlSP* hkgtuningToggle = nullptr;
-
-  // State tracking
-  bool offroad = false;
-  Params params;
-  int hkg_state = 0;
-  QString toggleDisableMsg(bool openpilotLong) const;
-
-private slots:
-  void updateCarToggles();
+  PlatformSelector *platformSelector = nullptr;
+  bool offroad;
 };
